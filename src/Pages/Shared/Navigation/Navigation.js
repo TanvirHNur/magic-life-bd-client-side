@@ -8,10 +8,10 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import {  NavLink } from 'react-router-dom';
 import './Navigation.css'
-// import useAuth from '../../../hooks/useAuth';
+import useAuth from '../../../hooks/useAuth';
 
 const Navigation = () => {
-  // const {user, logOut}= useAuth();
+  const {user, logOut}= useAuth();
     return (
           <div>
             
@@ -28,12 +28,14 @@ const Navigation = () => {
                     <MenuIcon />
                   </IconButton>
                   <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                    Magic Life
+                  <NavLink style={{textDecoration: 'none'}} to="/">
+                  <Button color="inherit">Magic Life</Button>
+                  </NavLink>
                   </Typography>
-                  <NavLink style={{textDecoration: 'none', color: 'white', backgroundColor: '#5CE7ED'}} to="/appointment">
+                  <NavLink style={{textDecoration: 'none', color: 'white', backgroundColor: '#5CE7ED'}} to="/allProducts">
                   <Button color="inherit">Explore More</Button>
                   </NavLink>
-                  {/* {
+                  {
                     user?.email ? 
                     <>
                     <NavLink to="/dashboard" style={{textDecoration: 'none', color: 'white'}}>
@@ -47,7 +49,7 @@ const Navigation = () => {
                   <NavLink style={{textDecoration: 'none', color: 'white'}} to="/login">
                   <Button color="inherit">Login</Button>
                   </NavLink>
-                  } */}
+                  }
                 </Toolbar>
               </AppBar>
             </Box>
