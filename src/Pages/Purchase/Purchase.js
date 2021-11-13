@@ -8,7 +8,7 @@ const Purchase = () => {
     const {id} =useParams();
     const [products,setProducts] = useState([]);
     useEffect( () => {
-        fetch('http://localhost:5000/products')
+        fetch('https://desolate-hamlet-07512.herokuapp.com/products')
         .then(res=> res.json())
         .then(data=> setProducts(data))
         .catch(err => {
@@ -26,7 +26,7 @@ const Purchase = () => {
         data.id = _id;
         data.product = title;
         console.log(data)
-        fetch('http://localhost:5000/orders',  {
+        fetch('https://desolate-hamlet-07512.herokuapp.com/orders',  {
             method: 'POST',
             headers: {
               'content-type': 'application/json'

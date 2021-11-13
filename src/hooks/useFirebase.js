@@ -101,7 +101,7 @@ updateProfile(auth.currentUser, {
     //dependacy
     
     useEffect(  () => {
-      fetch(`http://localhost:5000/users/${user.email}`)
+      fetch(`https://desolate-hamlet-07512.herokuapp.com/users/${user.email}`)
       .then(res=> res.json())
       .then(data=> setAdmin(data.admin))
     }, [user.email])

@@ -7,7 +7,7 @@ import { CircularProgress, Container } from '@mui/material';
 const Products = () => {
     const [products,setProducts] = useState([]);
     useEffect( () => {
-        fetch('http://localhost:5000/products')
+        fetch('https://desolate-hamlet-07512.herokuapp.com/products')
         .then(res=> res.json())
         .then(data=> setProducts(data.slice(0,6)))
         .catch(err => {

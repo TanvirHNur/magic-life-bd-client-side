@@ -14,7 +14,7 @@ const Orders = () => {
     const {user} = useAuth();
     const [orders, setOrders] = useState([]);
     useEffect( () => {
-        const url = `http://localhost:5000/orders`
+        const url = `https://desolate-hamlet-07512.herokuapp.com/orders`
         fetch(url)
         .then(res=> res.json())
         .then(data=> setOrders(data))
@@ -24,7 +24,7 @@ const Orders = () => {
         const procced = window.confirm('Are you sure, you want to delete?')
         if(procced){
             
-        const url = `http://localhost:5000/orders/${id}`;
+        const url = `https://desolate-hamlet-07512.herokuapp.com/orders/${id}`;
         fetch(url, {
             method: 'DELETE'
         })
