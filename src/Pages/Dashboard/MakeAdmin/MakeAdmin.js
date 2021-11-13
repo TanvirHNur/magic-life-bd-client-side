@@ -32,7 +32,7 @@ const MakeAdmin = () => {
 
     return (
         <div>
-            make a Admin 
+            make your beloved one Admin 
             <form onSubmit={handleAdminSubmit}>
             <TextField sx={{width: "50%", m:1}} onBlur={handleOnBlur}  name="email"  label="Your Email" variant="standard" type="email" required />
              <Button sx={{ width: '50%', m: 1 }} type="submit" variant="contained" style={{backgroundColor: '#5CE7ED'}}>Make Admin</Button>

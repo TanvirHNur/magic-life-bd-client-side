@@ -53,7 +53,6 @@ updateProfile(auth.currentUser, {
       setIsLoading(true);
         signInWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
-    console.log(userCredential)
     const destination = location?.state?.from || '/';
     histroy.replace(destination);
     setAuthError('');

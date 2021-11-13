@@ -26,8 +26,8 @@ const WriteAReview = () => {
 
             }
         })
-        // alert('Order placed successfully');
-        //         reset();
+        alert('Thank you For your valuable comment. Your comment is important to us. We will publish it on review section right now');
+                reset();
 
     };
     return (
