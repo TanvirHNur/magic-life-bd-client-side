@@ -3,7 +3,6 @@ import { Box } from '@mui/system';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
-import SubscriptionsOutlinedIcon from '@mui/icons-material/SubscriptionsOutlined';
 import { Instagram, Twitter, YouTube } from '@mui/icons-material';
 
 const Footer = () => {
